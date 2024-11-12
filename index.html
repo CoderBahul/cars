@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RC Car Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin: 20px;
+        }
+        .download-section, .specifications-section, .features-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .download-section h2, .specifications-section h2, .features-section h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+        .download-section a {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        .download-section a:hover {
+            background-color: #218838;
+        }
+        .specifications-list, .features-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .specifications-list li, .features-list li {
+            padding: 8px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .specifications-list img, .features-list img {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+        .status {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        .status img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RC Car with Smart Features</h1>
+        <p>A car that stops when it detects obstacles or alcohol. Features a black line follower, remote control, and automatic headlights.</p>
+    </header>
+
+    <nav>
+        <a href="#download">Download</a>
+        <a href="#specifications">Specifications</a>
+        <a href="#features">Features</a>
+    </nav>
+
+    <div class="content">
+        <!-- Download Section -->
+        <section id="download" class="download-section">
+            <h2>Download the RC Car Application</h2>
+            <p>Click below to download the application for controlling your RC Car.</p>
+            <a href="https://drive.google.com/file/d/1Ado_hDZijg_Qq1VeLnqHlHre9D_cnxM2/view" target="_blank">Download Application</a>
+        </section>
+
+        <!-- Specifications Section -->
+        <section id="specifications" class="specifications-section">
+            <h2>RC Car Specifications</h2>
+            <ul class="specifications-list">
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=13EcYi45Q4rhghmc2gGg226DdMMUeOqE5" alt="Sensor Image">
+                    <strong>Obstacle Detection:</strong> Stops the car when an obstacle is detected.
+                </li>
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=1FHfQmi_OSF80aO8hkbd3jINQiZM1RjhA" alt="Sensor Image">
+                    <strong>Alcohol Detection:</strong> Stops the car if alcohol is detected.
+                </li>
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=15420QLPJ3kmsJjLdXK9fJEwf8vFzCnMy" alt="IR Sensor">
+                    <strong>Black Line Follower:</strong> Follows black lines automatically.
+                </li>
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=1aEyKxcpU-KEH4WWJJ41AIOAJEEge0tSq" alt="Sensor Image">
+                    <strong>Remote Control:</strong> Control the car via a remote control transmitter
+                </li>
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=1qv7DId0hZTxXVW4b4-IbSkN_Ou1HWQ3X" alt="Sensor Image">
+                    <strong>Emotions:</strong> Make a sad face with red bulbs when any of alcohol or obstacle is detected
+                </li>
+                <li>
+                    <img src="https://drive.google.com/uc?export=view&id=1VvEe7-O4fkWaf3GwH_bT_CTnXefC94cP" alt="Sensor Image">
+                    <strong>Day/Night Light Sensor:</strong> Turns on headlights automatically in low light.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <h2>Key Features</h2>
+            <ul class="features-list">
+                <li>
+                    <strong>Black Line Following:</strong> The car follows a predefined black line path.
+                </li>
+                <li>
+                    <strong>Remote Control:</strong> Full control through the app for forward, reverse, and turns.
+                </li>
+                <li>
+                    <strong>Alcohol Detection:</strong> Integrated alcohol sensor that detects presence of alcohol fumes.
+                </li>
+                <li>
+                    <strong>Obstacle Detection:</strong> Using ultrasonic sensors, the car stops when obstacles are detected.
+                </li>
+                <li>
+                    <strong>Day/Night Light Sensor:</strong> Automatically turns on headlights in the dark.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Status Section -->
+        <section class="status">
+            <h2>Status:</h2>
+            <div id="carStatus">
+                <p id="statusMessage">All clear! 😊</p>
+                <img id="statusImage" src="https://via.placeholder.com/100x100/00FF00/FFFFFF?text=:)">
+            </div>
+        </section>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; background-color: #282c34; color: white;">
+        <p>&copy; 2024 RC Car Application. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
