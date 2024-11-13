@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR Sensor Car Safety System</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Title styling */
+        h1 {
+            color: #ff6347;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Descriptive text */
+        .description {
+            color: #4682b4;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* List of actions */
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+            color: #2f4f4f;
+        }
+
+        li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        /* Visual indicators */
+        #car, #alarm, #sad-face {
+            font-size: 70px;
+            margin: 20px;
+            transition: transform 0.5s, opacity 1s;
+        }
+
+        /* Styling for obstacle detection */
+        .obstacle {
+            color: #b22222;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        /* Button styling */
+        .trigger-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .trigger-button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Styling for animation */
+        #car {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #alarm {
+            transition: transform 0.5s ease;
+        }
+
+        #sad-face {
+            font-size: 100px;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IR Sensor Car Safety System</h1>
+
+    <div class="container">
+        <p class="description">The IR sensor detects obstacles in the car's path. If an obstacle is detected, the car stops, an alarm beeps, and a sad face appears as a signal that the car cannot move further.</p>
+
+        <div>
+            <span id="car">🚗</span>
+            <span id="alarm">🔊</span>
+            <span id="sad-face">😢</span>
+        </div>
+
+        <div class="obstacle">
+            <p><strong>Obstacle Detected!</strong></p>
+            <p>When an IR sensor detects an object in the path of the car, it triggers the following actions:</p>
+        </div>
+
+        <ul>
+            <li>The car stops moving immediately to avoid a collision.</li>
+            <li>An alarm goes off to alert the driver and passengers.</li>
+            <li>A sad face emoji is displayed, indicating that the car is stuck due to the obstacle.</li>
+        </ul>
+
+        <p>Click the button below to simulate obstacle detection and see the system in action!</p>
+        <button class="trigger-button" onclick="activateIRSensor()">Simulate Obstacle Detection</button>
+    </div>
+
+    <script>
+        function activateIRSensor() {
+            // Simulate car stopping (move it to the left)
+            document.getElementById("car").style.transform = "translateX(-150px)";
+
+            // Simulate alarm beeping (pulsate effect)
+            document.getElementById("alarm").style.transform = "scale(1.2)";
+            setTimeout(() => {
+                document.getElementById("alarm").style.transform = "scale(1)";
+            }, 500);
+
+            // Show sad face indicating the car cannot move
+            document.getElementById("sad-face").style.opacity = "1";
+            document.getElementById("sad-face").textContent = "😢";
+
+            // Display a message to indicate the obstacle detection
+            alert("Obstacle detected! The car has stopped, the alarm is beeping, and a sad face is displayed.");
+        }
+    </script>
+
+</body>
+</html>

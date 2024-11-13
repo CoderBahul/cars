@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ-3 Sensor Car Safety System</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Title styling */
+        h1 {
+            color: #ff4500;
+            text-shadow: 2px 2px 5px #aaa;
+        }
+
+        /* Explanation box styling */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff8dc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animated elements styling */
+        #car, #alarm, #sad-face {
+            font-size: 80px;
+            margin: 20px;
+            transition: transform 0.5s;
+        }
+
+        /* Colors for each section */
+        .sensor {
+            color: #8b0000;
+            font-size: 1.2em;
+        }
+
+        .actions {
+            color: #006400;
+            font-size: 1.2em;
+        }
+
+        .status {
+            color: #8a2be2;
+            font-size: 1.2em;
+        }
+
+        /* Button styling */
+        .trigger-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .trigger-button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MQ-3 Sensor Car Safety System</h1>
+
+    <div class="container">
+        <p class="sensor">The MQ-3 sensor detects alcohol vapor in the air. When it senses a high level, it sends a signal to activate the car's safety features.</p>
+        
+        <div>
+            <span id="car">🚗</span>
+            <span id="alarm">🔊</span>
+            <span id="sad-face">😢</span>
+        </div>
+
+        <p class="actions">When the MQ-3 sensor is triggered:</p>
+        <ul>
+            <li>The car stops immediately to prevent any accidents.</li>
+            <li>An alarm beeps to alert the driver and passengers.</li>
+            <li>A sad face is shown to indicate the driver is unfit to drive.</li>
+        </ul>
+
+        <p class="status">Press the button below to simulate the MQ-3 sensor in action.</p>
+        <button class="trigger-button" onclick="activateSystem()">Alcohol</button>
+    </div>
+
+    <script>
+        function activateSystem() {
+            // Car stop animation
+            document.getElementById("car").style.transform = "translateX(-100px)";
+
+            // Alarm beep animation (pulsating effect)
+            document.getElementById("alarm").style.transform = "scale(1.2)";
+            setTimeout(() => {
+                document.getElementById("alarm").style.transform = "scale(1)";
+            }, 500);
+
+            // Sad face indication
+            document.getElementById("sad-face").textContent = "😢";
+
+            // Status update
+            alert("MQ-3 sensor activated! The car has stopped, the alarm is beeping, and a sad face is displayed.");
+        }
+    </script>
+
+</body>
+</html>
