@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4-Channel RC Transmitter and Receiver</title>
+    <title>4-Channel RC 27MHz Transmitter and Receiver</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +18,18 @@
     
     <section class="game">
         <h2>RC Car Control Game</h2>
-        <p>Use the arrow keys to control the car!</p>
+        <p>Use the buttons to control the car!</p>
         <div id="game-container">
             <div id="car" class="game-object"></div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="up">Up</button>
+            <div>
+                <button class="control-btn" id="left">Left</button>
+                <button class="control-btn" id="right">Right</button>
+            </div>
+            <button class="control-btn" id="down">Down</button>
         </div>
     </section>
     
