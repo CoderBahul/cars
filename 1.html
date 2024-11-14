@@ -124,6 +124,9 @@
         <button class="trigger-button" onclick="activateIRSensor()">Simulate Obstacle Detection</button>
     </div>
 
+    <!-- Add beep sound here -->
+    <audio id="beepSound" src="OBS.mp3" preload="auto"></audio>
+
     <script>
         function activateIRSensor() {
             // Simulate car stopping (move it to the left)
@@ -138,6 +141,9 @@
             // Show sad face indicating the car cannot move
             document.getElementById("sad-face").style.opacity = "1";
             document.getElementById("sad-face").textContent = "😢";
+
+            // Play beep sound
+            document.getElementById("beepSound").play();
 
             // Display a message to indicate the obstacle detection
             alert("Obstacle detected! The car has stopped, the alarm is beeping, and a sad face is displayed.");
