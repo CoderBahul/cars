@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Car Emotions Feature</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            font-size: 2em;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .content {
+            margin: 40px;
+        }
+        .feature-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .emotion-display {
+            margin: 30px 0;
+            font-size: 3em;
+        }
+        .emotion-display img {
+            width: 150px;
+        }
+        .buttons {
+            margin: 20px;
+        }
+        .btn {
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .btn:hover {
+            background-color: #e53e3e;
+        }
+        .reset-btn {
+            background-color: #4CAF50;
+            font-size: 1.5em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .emotion-display img {
+                width: 120px;
+            }
+            .btn {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    RC Car Emotions Feature
+</header>
+
+<div class="content">
+    <div class="feature-description">
+        <p>The RC car has an exciting "Emotions" feature that allows it to express a sad face with red lights and a beeping sound whenever it detects an obstacle or alcohol. This interactive feature adds a unique touch to the car, making it more intuitive and fun to use. Below, you can try out a simulation of this behavior by pressing the buttons that trigger the emotions.</p>
+    </div>
+
+    <div class="emotion-display">
+        <img id="emotionImage" src="happy.png" alt="Smiley Face">
+    </div>
+
+    <div class="buttons">
+        <button class="btn" id="obstacleButton">Obstacle Detected</button>
+        <button class="btn" id="alcoholButton">Alcohol Detected</button>
+        <button class="btn reset-btn" id="resetButton">Reset</button>
+    </div>
+
+    <!-- Add sounds here -->
+    <audio id="beepSound" class="sound" src="OBS.mp3" preload="auto"></audio>
+    <audio id="alcoholSound" class="sound" src="ALC.mp3" preload="auto"></audio>
+
+</div>
+
+<footer>
+    <p>RC Car Feature Showcase | 2024</p>
+</footer>
+
+<script>
+    const obstacleButton = document.getElementById('obstacleButton');
+    const alcoholButton = document.getElementById('alcoholButton');
+    const resetButton = document.getElementById('resetButton');
+    const emotionImage = document.getElementById('emotionImage');
+    const beepSound = document.getElementById('beepSound');
+    const alcoholSound = document.getElementById('alcoholSound');
+
+    // Reset to smiley face
+    resetButton.addEventListener('click', function() {
+        emotionImage.src = "happy.png";
+        beepSound.pause();
+        alcoholSound.pause();
+        beepSound.currentTime = 0;
+        alcoholSound.currentTime = 0;
+        alert("Emotion reset to smile!");
+    });
+
+    obstacleButton.addEventListener('click', function() {
+        emotionImage.src = "sad.png";
+        beepSound.play();
+        alert("Clear the way!");
+    });
+
+    alcoholButton.addEventListener('click', function() {
+        emotionImage.src = "sad.png";
+        alcoholSound.play();
+        alert("Alcohol detected!");
+    });
+</script>
+
+</body>
+</html>
