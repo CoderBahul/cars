@@ -82,8 +82,7 @@ footer {
     width: 100%;
     max-width: 500px;
     height: 400px;
-    background-image: url('https://via.placeholder.com/500x400.png?text=Road+Background');
-    background-size: cover;
+    background-color: #D3D3D3; /* Light gray background as a road */
     position: relative;
     margin: 20px auto;
     border-radius: 8px;
@@ -92,9 +91,9 @@ footer {
 
 .game-object {
     width: 80px;
-    height: 80px;
-    background-image: url('https://via.placeholder.com/80x80.png?text=Car');
-    background-size: cover;
+    height: 120px;
+    background-image: url('car.png'); /* Replace 'car.png' with the path to your PNG file */
+    background-size: cover;  /* Ensure the image covers the entire div */
     position: absolute;
     top: 160px;
     left: 210px;
