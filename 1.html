@@ -94,6 +94,22 @@
             font-size: 100px;
             transition: opacity 1s ease-in-out;
         }
+
+        /* Styling for reset button */
+        .reset-button {
+            background-color: #32cd32;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .reset-button:hover {
+            background-color: #228b22;
+        }
     </style>
 </head>
 <body>
@@ -122,6 +138,9 @@
 
         <p>Click the button below to simulate obstacle detection and see the system in action!</p>
         <button class="trigger-button" onclick="activateIRSensor()">Simulate Obstacle Detection</button>
+
+        <!-- Reset button -->
+        <button class="reset-button" onclick="resetSystem()">Reset</button>
     </div>
 
     <!-- Add beep sound here -->
@@ -147,6 +166,21 @@
 
             // Display a message to indicate the obstacle detection
             alert("Obstacle detected! The car has stopped, the alarm is beeping, and a sad face is displayed.");
+        }
+
+        function resetSystem() {
+            // Reset car position
+            document.getElementById("car").style.transform = "translateX(0px)";
+
+            // Reset alarm and sad face
+            document.getElementById("alarm").style.transform = "scale(1)";
+            document.getElementById("sad-face").textContent = "🙂";
+
+            // Stop beep sound
+            document.getElementById("beepSound").pause();
+            document.getElementById("beepSound").currentTime = 0;
+
+            alert("System reset! The car is back to normal, the alarm is off, and the face is happy.");
         }
     </script>
 
