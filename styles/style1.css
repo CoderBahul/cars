@@ -1,0 +1,118 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(120deg, #ffffff, #f4f4f4);
+    overflow-x: hidden;
+}
+
+header .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+header .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.visuals {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.visuals div {
+    text-align: center;
+}
+
+.visuals span {
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: #ff6f61;
+    transition: transform 0.3s ease-in-out;
+}
+
+.visuals p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+#car:hover, #alarm:hover, #sad-face:hover {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.trigger-button {
+    background: linear-gradient(to right, #ff6f61, #ff2e63);
+    color: white;
+    box-shadow: 0px 5px 15px rgba(255, 110, 97, 0.3);
+}
+
+.trigger-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 110, 97, 0.5);
+}
+
+.reset-button {
+    background: linear-gradient(to right, #1cb5e0, #000046);
+    color: white;
+    box-shadow: 0px 5px 15px rgba(28, 181, 224, 0.3);
+}
+
+.reset-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(28, 181, 224, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #0f2027;
+    color: white;
+    font-size: 0.9rem;
+    position: relative;
+}
