@@ -14,5 +14,4 @@ gtts
 pydub
 ffmpeg
 pvporcupine
-portaudio19-dev
 pip>=24.3.1
