@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coderbahul.github.io/cars/sitemap.xml
